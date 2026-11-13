@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrias que Atendemos | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html">Catálogo</a></li>
+                <li><a href="index.html" class="active">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <span>Industrias</span></div>
+            <h1>Soluciones por Sector Industrial</h1>
+            <p>Abastecemos los sectores productivos clave del Estado Zulia y Venezuela con fijaciones adaptadas a las exigencias ambientales y mecánicas de cada operación.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="feature-grid">
+                <div class="feature-item hidden-up">
+                    <div class="feature-icon">🛢️</div>
+                    <h4>Sector Petrolero y Gasífero</h4>
+                    <p>Suministro de espárragos ASTM A193 B7 y B7M, tuercas 2H y fijaciones recubiertas en teflón para cabezales de pozo, múltiples de producción y refinerías.</p>
+                </div>
+                <div class="feature-item hidden-up cascade-1">
+                    <div class="feature-icon">🦐</div>
+                    <h4>Industria Camaronera y Naval</h4>
+                    <p>Tornillería en Acero Inoxidable AISI 316 y bronce para estaciones de bombeo, aireadores, muelles lacustres y embarcaciones expuestas a alta salinidad.</p>
+                </div>
+                <div class="feature-item hidden-up cascade-2">
+                    <div class="feature-icon">🏗️</div>
+                    <h4>Construcción y Metalmecánica</h4>
+                    <p>Pernos estructurales A325/A490, varillas de anclaje y fijaciones para montaje de galpones, puentes, silos y estructuras metálicas pesadas.</p>
+                </div>
+                <div class="feature-item hidden-up cascade-3">
+                    <div class="feature-icon">🚜</div>
+                    <h4>Agroindustria y Transporte</h4>
+                    <p>Tornillería SAE Grado 5 y Grado 8, tornillos de arado, pines de seguridad y tuercas de torque prevaleciente para maquinaria pesada y flotas de carga.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - Soluciones Industriales. | <a href="../index.html" style="color:#fff; text-decoration:underline;">Volver al Inicio</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

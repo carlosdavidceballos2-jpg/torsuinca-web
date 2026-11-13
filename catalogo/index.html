@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Técnico Interactivo | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="index.html" class="active">Catálogo ▾</a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Ver Catálogo Completo</a>
+                        <a href="../tornilleria-estructural/index.html">Tornillería Estructural</a>
+                        <a href="../acero-inoxidable/index.html">Acero Inoxidable</a>
+                        <a href="../sistemas-de-fijacion/index.html">Sistemas de Fijación</a>
+                        <a href="../herramientas-de-fijacion/index.html">Herramientas de Fijación</a>
+                    </div>
+                </li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <span>Catálogo Interactivo</span></div>
+            <h1>Catálogo General de Suministros</h1>
+            <p>Filtra por línea de negocio, busca por normativa (ASTM, SAE, DIN) o agrega productos directamente a tu lista de cotización mayorista.</p>
+        </section>
+
+        <section class="section-container">
+            <!-- CONTROLES DE BÚSQUEDA Y FILTRADO -->
+            <div class="catalog-controls hidden-up">
+                <div class="search-box">
+                    <input type="text" id="catalog-search" placeholder="🔍 Buscar por nombre, norma (ej. A325, B7, 316, Torquímetro)...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="estructural">Estructural</button>
+                    <button class="filter-btn" data-filter="inoxidable">Inoxidable</button>
+                    <button class="filter-btn" data-filter="fijacion">Fijación y Espárragos</button>
+                    <button class="filter-btn" data-filter="herramientas">Herramientas</button>
+                </div>
+            </div>
+
+            <!-- GRID DE PRODUCTOS FILTRABLES -->
+            <div class="product-grid">
+                
+                <div class="product-card catalog-item" data-category="estructural">
+                    <div>
+                        <div class="product-illustration illust-estructural">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="8" width="20" height="14" rx="2" fill="#3A3A3A"/>
+                                <path d="M25 14 L40 6 L55 14 L55 22 L25 22 Z" fill="#555" stroke="#3A3A3A" stroke-width="1.5"/>
+                                <rect x="37" y="22" width="6" height="48" rx="1" fill="#707070"/>
+                                <line x1="37" y1="28" x2="43" y2="28" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="32" x2="43" y2="32" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="36" x2="43" y2="36" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="40" x2="43" y2="40" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="44" x2="43" y2="44" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="48" x2="43" y2="48" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="52" x2="43" y2="52" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="56" x2="43" y2="56" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="60" x2="43" y2="60" stroke="#555" stroke-width="0.8"/>
+                                <line x1="37" y1="64" x2="43" y2="64" stroke="#555" stroke-width="0.8"/>
+                            </svg>
+                            <span class="illust-label">A325</span>
+                        </div>
+                        <span class="badge-tag">ASTM A325</span>
+                        <h3>Perno Hexagonal Estructural A325</h3>
+                        <p>Diseñado para uniones de acero estructural en puentes, galpones y edificios industriales.</p>
+                        <ul class="specs-list">
+                            <li><span>Diámetros:</span> <strong>1/2" a 1-1/2"</strong></li>
+                            <li><span>Acabado:</span> <strong>Negro / Galvanizado</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Perno Estructural ASTM A325')">+ Cotizar</button>
+                        <a href="../tornilleria-estructural/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="estructural">
+                    <div>
+                        <div class="product-illustration illust-estructural">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="28" y="10" width="24" height="13" rx="2" fill="#3A3A3A"/>
+                                <path d="M23 16 L40 8 L57 16 L57 23 L23 23 Z" fill="#555" stroke="#3A3A3A" stroke-width="1.5"/>
+                                <rect x="36" y="23" width="8" height="46" rx="1" fill="#707070"/>
+                                <line x1="36" y1="30" x2="44" y2="30" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="35" x2="44" y2="35" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="40" x2="44" y2="40" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="45" x2="44" y2="45" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="50" x2="44" y2="50" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="55" x2="44" y2="55" stroke="#555" stroke-width="1"/>
+                                <line x1="36" y1="60" x2="44" y2="60" stroke="#555" stroke-width="1"/>
+                                <circle cx="40" cy="16" r="3" fill="none" stroke="#888" stroke-width="0.8" stroke-dasharray="1.5 1"/>
+                                <text x="40" y="75" text-anchor="middle" font-size="7" fill="#999" font-family="Montserrat" font-weight="700">6 RAYAS</text>
+                            </svg>
+                            <span class="illust-label">GR. 8</span>
+                        </div>
+                        <span class="badge-tag">SAE J429</span>
+                        <h3>Tornillo Hexagonal Grado 8</h3>
+                        <p>Acero de medio carbono templado y revenido para maquinaria pesada y automotriz de alto esfuerzo.</p>
+                        <ul class="specs-list">
+                            <li><span>Resistencia:</span> <strong>150,000 PSI</strong></li>
+                            <li><span>Acabado:</span> <strong>Pavonado / Tropicalizado</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Tornillo Hexagonal SAE Grado 8')">+ Cotizar</button>
+                        <a href="../tornilleria-estructural/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="inoxidable">
+                    <div>
+                        <div class="product-illustration illust-inoxidable">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="10" width="20" height="12" rx="2" fill="#5a8dbf"/>
+                                <path d="M26 15 L40 9 L54 15 L54 22 L26 22 Z" fill="#7aaad4" stroke="#5a8dbf" stroke-width="1.5"/>
+                                <rect x="37" y="22" width="6" height="48" rx="1" fill="url(#inoxGrad1)"/>
+                                <line x1="37" y1="28" x2="43" y2="28" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="33" x2="43" y2="33" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="38" x2="43" y2="38" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="43" x2="43" y2="43" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="48" x2="43" y2="48" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="53" x2="43" y2="53" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="58" x2="43" y2="58" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="63" x2="43" y2="63" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <!-- Reflejo brillante inoxidable -->
+                                <line x1="39" y1="24" x2="39" y2="68" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                                <defs><linearGradient id="inoxGrad1" x1="37" y1="22" x2="43" y2="70"><stop offset="0%" stop-color="#a0c4e0"/><stop offset="100%" stop-color="#7aaad4"/></linearGradient></defs>
+                            </svg>
+                            <span class="illust-label">316</span>
+                        </div>
+                        <span class="badge-tag">AISI 316 / A4</span>
+                        <h3>Perno Hexagonal Inoxidable 316</h3>
+                        <p>Con aleación de molibdeno para máxima resistencia a picaduras por cloruros, ambientes marinos y salinos.</p>
+                        <ul class="specs-list">
+                            <li><span>Roscas:</span> <strong>UNC / Milimétrica</strong></li>
+                            <li><span>Uso:</span> <strong>Naval, Acuícola, Químico</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Perno Inoxidable AISI 316')">+ Cotizar</button>
+                        <a href="../acero-inoxidable/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="inoxidable">
+                    <div>
+                        <div class="product-illustration illust-inoxidable">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Tornillo Allen cabeza cilíndrica -->
+                                <rect x="28" y="12" width="24" height="10" rx="5" fill="#7aaad4" stroke="#5a8dbf" stroke-width="1"/>
+                                <rect x="35" y="14" width="10" height="6" rx="1" fill="#4a7da8"/>
+                                <rect x="37" y="22" width="6" height="38" rx="1" fill="url(#inoxGrad2)"/>
+                                <line x1="37" y1="27" x2="43" y2="27" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="32" x2="43" y2="32" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="37" x2="43" y2="37" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="42" x2="43" y2="42" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="47" x2="43" y2="47" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <line x1="37" y1="52" x2="43" y2="52" stroke="#8cb8d8" stroke-width="0.8"/>
+                                <!-- Arandela debajo -->
+                                <ellipse cx="40" cy="63" rx="12" ry="3" fill="#b0cde0" stroke="#7aaad4" stroke-width="1"/>
+                                <ellipse cx="40" cy="62" rx="12" ry="3" fill="#c8ddef"/>
+                                <ellipse cx="40" cy="62" rx="5" ry="1.5" fill="#eef2f7"/>
+                                <line x1="39" y1="24" x2="39" y2="58" stroke="rgba(255,255,255,0.35)" stroke-width="0.8"/>
+                                <defs><linearGradient id="inoxGrad2" x1="37" y1="22" x2="43" y2="60"><stop offset="0%" stop-color="#a0c4e0"/><stop offset="100%" stop-color="#7aaad4"/></linearGradient></defs>
+                            </svg>
+                            <span class="illust-label">304</span>
+                        </div>
+                        <span class="badge-tag">AISI 304 / A2</span>
+                        <h3>Tornillería Allen y Arandelas 304</h3>
+                        <p>Sujetadores inoxidables grado alimenticio e industrial para plantas procesadoras y equipos médicos.</p>
+                        <ul class="specs-list">
+                            <li><span>Norma:</span> <strong>DIN 912 / ISO 4762</strong></li>
+                            <li><span>Diámetros:</span> <strong>M4 a M24</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Tornillería Inoxidable AISI 304')">+ Cotizar</button>
+                        <a href="../acero-inoxidable/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="fijacion">
+                    <div>
+                        <div class="product-illustration illust-fijacion">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Espárrago B7: varilla roscada completa con 2 tuercas -->
+                                <rect x="38" y="6" width="4" height="68" rx="1" fill="#b08840"/>
+                                <line x1="38" y1="10" x2="42" y2="10" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="14" x2="42" y2="14" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="18" x2="42" y2="18" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="22" x2="42" y2="22" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="26" x2="42" y2="26" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="30" x2="42" y2="30" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="34" x2="42" y2="34" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="38" x2="42" y2="38" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="42" x2="42" y2="42" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="46" x2="42" y2="46" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="50" x2="42" y2="50" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="54" x2="42" y2="54" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="58" x2="42" y2="58" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="62" x2="42" y2="62" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="66" x2="42" y2="66" stroke="#967030" stroke-width="0.7"/>
+                                <line x1="38" y1="70" x2="42" y2="70" stroke="#967030" stroke-width="0.7"/>
+                                <!-- Tuerca superior 2H -->
+                                <path d="M30 14 L40 9 L50 14 L50 20 L30 20 Z" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1.2"/>
+                                <!-- Tuerca inferior 2H -->
+                                <path d="M30 60 L40 55 L50 60 L50 66 L30 66 Z" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1.2"/>
+                            </svg>
+                            <span class="illust-label">B7</span>
+                        </div>
+                        <span class="badge-tag">ASTM A193 B7</span>
+                        <h3>Espárragos Petroleros B7 + 2H</h3>
+                        <p>Varillas totalmente roscadas en acero al cromo-molibdeno para bridas, válvulas y recipientes de alta presión.</p>
+                        <ul class="specs-list">
+                            <li><span>Tuercas Incluidas:</span> <strong>ASTM A194 Gr. 2H</strong></li>
+                            <li><span>Recubrimiento:</span> <strong>Negro / Teflón Xylan</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Espárragos ASTM A193 B7 con Tuercas 2H')">+ Cotizar</button>
+                        <a href="../sistemas-de-fijacion/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="fijacion">
+                    <div>
+                        <div class="product-illustration illust-fijacion">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Anclaje de cuña (wedge anchor) -->
+                                <rect x="37" y="6" width="6" height="10" rx="1" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1"/>
+                                <!-- Arandela -->
+                                <ellipse cx="40" cy="18" rx="10" ry="2.5" fill="#d4b870" stroke="#8a6b2e" stroke-width="0.8"/>
+                                <!-- Tuerca hex -->
+                                <path d="M33 18 L40 14 L47 18 L47 23 L33 23 Z" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1"/>
+                                <!-- Vástago -->
+                                <rect x="38" y="23" width="4" height="38" rx="0.5" fill="#b08840"/>
+                                <line x1="38" y1="28" x2="42" y2="28" stroke="#967030" stroke-width="0.6"/>
+                                <line x1="38" y1="33" x2="42" y2="33" stroke="#967030" stroke-width="0.6"/>
+                                <line x1="38" y1="38" x2="42" y2="38" stroke="#967030" stroke-width="0.6"/>
+                                <line x1="38" y1="43" x2="42" y2="43" stroke="#967030" stroke-width="0.6"/>
+                                <!-- Cuña expansiva -->
+                                <path d="M35 61 L40 70 L45 61 Z" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1"/>
+                                <line x1="38" y1="63" x2="42" y2="63" stroke="#8a6b2e" stroke-width="0.5"/>
+                                <!-- Concreto -->
+                                <rect x="10" y="52" width="60" height="22" rx="2" fill="#ccc" stroke="#aaa" stroke-width="1" stroke-dasharray="4 2"/>
+                                <text x="40" y="66" text-anchor="middle" font-size="7" fill="#888" font-family="Inter" font-weight="600">CONCRETO</text>
+                            </svg>
+                            <span class="illust-label">WEDGE</span>
+                        </div>
+                        <span class="badge-tag">Anclaje Pesado</span>
+                        <h3>Anclaje Mecánico de Cuña (Wedge)</h3>
+                        <p>Fijación por expansión controlada para anclar columnas, racks industriales y motores sobre concreto.</p>
+                        <ul class="specs-list">
+                            <li><span>Diámetros:</span> <strong>3/8" hasta 1"</strong></li>
+                            <li><span>Material:</span> <strong>Acero Cincado / Inox</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Anclajes Mecánicos de Cuña para Concreto')">+ Cotizar</button>
+                        <a href="../sistemas-de-fijacion/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="herramientas">
+                    <div>
+                        <div class="product-illustration illust-herramientas">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Torquímetro -->
+                                <rect x="10" y="36" width="50" height="8" rx="3" fill="#5a9a5a" stroke="#3a7a3a" stroke-width="1.2"/>
+                                <!-- Cabeza cuadrada -->
+                                <rect x="56" y="33" width="14" height="14" rx="2" fill="#4a8a4a" stroke="#3a7a3a" stroke-width="1.2"/>
+                                <rect x="60" y="37" width="6" height="6" rx="1" fill="#3a7a3a"/>
+                                <!-- Mango ergonómico -->
+                                <rect x="4" y="34" width="10" height="12" rx="3" fill="#6aaa6a" stroke="#3a7a3a" stroke-width="1"/>
+                                <!-- Escala de torque -->
+                                <rect x="18" y="32" width="30" height="4" rx="1" fill="#e3f0e3" stroke="#5a9a5a" stroke-width="0.5"/>
+                                <line x1="22" y1="32" x2="22" y2="36" stroke="#3a7a3a" stroke-width="0.5"/>
+                                <line x1="28" y1="32" x2="28" y2="36" stroke="#3a7a3a" stroke-width="0.5"/>
+                                <line x1="34" y1="32" x2="34" y2="36" stroke="#3a7a3a" stroke-width="0.5"/>
+                                <line x1="40" y1="32" x2="40" y2="36" stroke="#3a7a3a" stroke-width="0.5"/>
+                                <!-- Indicador -->
+                                <polygon points="34,30 35,32 33,32" fill="#B3230B"/>
+                                <text x="40" y="54" text-anchor="middle" font-size="6.5" fill="#3a7a3a" font-family="Montserrat" font-weight="700">FT-LBS / Nm</text>
+                            </svg>
+                            <span class="illust-label">TORQUE</span>
+                        </div>
+                        <span class="badge-tag">Calibración ISO</span>
+                        <h3>Torquímetro Industrial de Golpe</h3>
+                        <p>Llave dinamométrica reversible con escala dual en Libras-Pie y Newton-Metro para apriete controlado.</p>
+                        <ul class="specs-list">
+                            <li><span>Cuadrante:</span> <strong>1/2", 3/4" y 1"</strong></li>
+                            <li><span>Precisión:</span> <strong>± 3% Certificado</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Torquímetro Industrial de Golpe')">+ Cotizar</button>
+                        <a href="../herramientas-de-fijacion/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+                <div class="product-card catalog-item" data-category="herramientas">
+                    <div>
+                        <div class="product-illustration illust-herramientas">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Dado de impacto: vista frontal -->
+                                <rect x="20" y="15" width="40" height="50" rx="6" fill="#5a9a5a" stroke="#3a7a3a" stroke-width="1.5"/>
+                                <!-- Cuadrante superior -->
+                                <rect x="33" y="10" width="14" height="10" rx="2" fill="#4a8a4a" stroke="#3a7a3a" stroke-width="1"/>
+                                <!-- Hueco hexagonal interior -->
+                                <polygon points="40,30 48,34 48,44 40,48 32,44 32,34" fill="#2a5a2a" stroke="#1a4a1a" stroke-width="1"/>
+                                <polygon points="40,33 46,36 46,42 40,45 34,42 34,36" fill="#3a6a3a"/>
+                                <!-- Ranura de seguridad -->
+                                <rect x="36" y="55" width="8" height="3" rx="1" fill="#3a7a3a"/>
+                                <!-- Textura forjado -->
+                                <line x1="24" y1="52" x2="56" y2="52" stroke="#4a8a4a" stroke-width="0.5" stroke-dasharray="2 2"/>
+                                <text x="40" y="73" text-anchor="middle" font-size="6.5" fill="#3a7a3a" font-family="Montserrat" font-weight="700">Cr-Mo FORJADO</text>
+                            </svg>
+                            <span class="illust-label">IMPACTO</span>
+                        </div>
+                        <span class="badge-tag">Cromo-Molibdeno</span>
+                        <h3>Dados de Impacto Serie Pesada</h3>
+                        <p>Juegos y dados individuales de pared gruesa diseñados para pistolas neumáticas e hidráulicas de alto torque.</p>
+                        <ul class="specs-list">
+                            <li><span>Medidas:</span> <strong>3/4" hasta 3-1/8"</strong></li>
+                            <li><span>Aleación:</span> <strong>Acero Cr-Mo Forjado</strong></li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; gap:8px;">
+                        <button class="btn-red" style="flex:1;" onclick="addToQuote('Dados de Impacto Cromo-Molibdeno')">+ Cotizar</button>
+                        <a href="../herramientas-de-fijacion/index.html" class="btn-outline">Ficha</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CALCULADORA TÉCNICA DE TORQUE -->
+            <div class="calculator-box hidden-up" id="calculadora">
+                <h3>⚙️ Calculadora Técnica de Torque Recomendado</h3>
+                <p style="font-size:14px; margin-top:5px;">Herramienta de ingeniería referencial para estimar el par de apriete según el grado del perno, diámetro nominal y condición de fricción.</p>
+                
+                <div class="calc-grid">
+                    <div class="calc-field">
+                        <label>Norma / Grado del Perno</label>
+                        <select id="bolt-grade">
+                            <option value="A325">ASTM A325 (Estructural)</option>
+                            <option value="G8">SAE Grado 8 (Alta Resistencia)</option>
+                            <option value="B7">ASTM A193 B7 (Petrolero)</option>
+                            <option value="316">AISI 316 (Acero Inoxidable)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label>Diámetro Nominal (Pulgadas)</label>
+                        <select id="bolt-size">
+                            <option value="1/2">1/2" - 13 UNC</option>
+                            <option value="5/8">5/8" - 11 UNC</option>
+                            <option value="3/4" selected>3/4" - 10 UNC</option>
+                            <option value="7/8">7/8" - 9 UNC</option>
+                            <option value="1">1" - 8 UNC</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label>Condición de la Rosca</label>
+                        <select id="bolt-lubrication">
+                            <option value="dry">Seco / Sin Lubricar (K=0.20)</option>
+                            <option value="lubricated">Lubricado / Anti-Seize (K=0.15)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn-red" id="calc-torque-btn" style="width:100%;">Calcular Torque</button>
+                    </div>
+                    <div class="calc-result">
+                        <span>Par de Apriete Estimado</span>
+                        <strong id="torque-output">320 ft-lbs <small style="font-size:14px; color:#555;">(434 Nm)</small></strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca. Local 8-39, Sector El Perú, Maracaibo, Zulia. | <a href="../index.html" style="color:#fff; text-decoration:underline;">Volver al Inicio</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

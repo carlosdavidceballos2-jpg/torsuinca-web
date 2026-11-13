@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Fijación y Torque | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html" class="active">Catálogo</a></li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <a href="../catalogo/index.html">Catálogo</a> / <span>Herramientas de Fijación</span></div>
+            <h1>Herramientas de Torque, Impacto y Precisión</h1>
+            <p>Instrumentos diseñados para garantizar la tensión exacta en pernos críticos, evitando fallas por fatiga o aflojamiento vibracional.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="product-grid">
+                <div class="product-card hidden-up">
+                    <div>
+                        <span class="badge-tag">Control de Par</span>
+                        <h3>Torquímetros de Trueno y Reloj</h3>
+                        <p>Llaves dinamométricas industriales con rangos desde 20 hasta 1,000 ft-lbs para mantenimiento mecánico y montaje.</p>
+                        <ul class="specs-list">
+                            <li><span>Cuadrantes:</span> <strong>3/8", 1/2", 3/4" y 1"</strong></li>
+                            <li><span>Escala:</span> <strong>Dual (Ft-Lbs / Nm)</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Torquímetros Industriales Calibrados')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-1">
+                    <div>
+                        <span class="badge-tag">Alto Impacto</span>
+                        <h3>Dados de Impacto Cr-Mo</h3>
+                        <p>Dados cortos y profundos en acero al cromo-molibdeno para uso con llaves de impacto neumáticas o eléctricas.</p>
+                        <ul class="specs-list">
+                            <li><span>Perfil:</span> <strong>Hexagonal 6 Puntas</strong></li>
+                            <li><span>Sistemas:</span> <strong>Pulgadas y Milimétricos</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Dados de Impacto Cromo-Molibdeno')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-2">
+                    <div>
+                        <span class="badge-tag">Mantenimiento de Roscas</span>
+                        <h3>Machos, Terrajas y Galgas</h3>
+                        <p>Herramientas de corte en acero rápido (HSS) para reconstrucción de roscas dañadas y peines medidores de paso.</p>
+                        <ul class="specs-list">
+                            <li><span>Roscas:</span> <strong>UNC, UNF, NPT y Métrica</strong></li>
+                            <li><span>Material:</span> <strong>HSS / Cobalto</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Juegos de Machos, Terrajas y Galgas de Rosca')">Añadir a Cotización</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - División Herramientas. | <a href="../catalogo/index.html" style="color:#fff; text-decoration:underline;">Volver al Catálogo</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

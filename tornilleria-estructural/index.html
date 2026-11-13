@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tornillería Estructural | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html" class="active">Catálogo</a></li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <a href="../catalogo/index.html">Catálogo</a> / <span>Tornillería Estructural</span></div>
+            <h1>Tornillería Estructural de Alta Resistencia</h1>
+            <p>Sujetadores de cabeza hexagonal pesada diseñados para soportar cargas críticas de tracción y corte en obras civiles, puentes, torres de telecomunicaciones y naves industriales.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="product-grid">
+                <div class="product-card hidden-up">
+                    <div>
+                        <span class="badge-tag">ASTM A325 / F3125</span>
+                        <h3>Pernos Estructurales A325</h3>
+                        <p>Suministrados con tuercas hexagonales pesadas ASTM A563 y arandelas endurecidas F436.</p>
+                        <ul class="specs-list">
+                            <li><span>Tensión Mínima:</span> <strong>120,000 PSI</strong></li>
+                            <li><span>Recubrimiento:</span> <strong>Negro / Galv. en Caliente</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Pernos Estructurales ASTM A325 + Tuerca + Arandela')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-1">
+                    <div>
+                        <span class="badge-tag">ASTM A490</span>
+                        <h3>Pernos de Aleación A490</h3>
+                        <p>Acero aleado tratado térmicamente para conexiones estructurales que requieren máxima capacidad de carga.</p>
+                        <ul class="specs-list">
+                            <li><span>Tensión Mínima:</span> <strong>150,000 PSI</strong></li>
+                            <li><span>Diámetros:</span> <strong>5/8" hasta 1-1/2"</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Pernos Estructurales ASTM A490')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-2">
+                    <div>
+                        <span class="badge-tag">SAE J429</span>
+                        <h3>Tornillería Grado 5 y Grado 8</h3>
+                        <p>Rosca ordinaria (UNC) y rosca fina (UNF) para ensamblaje de maquinaria pesada, equipos agrícolas y transporte.</p>
+                        <ul class="specs-list">
+                            <li><span>Grado 5:</span> <strong>120,000 PSI (3 Rayas)</strong></li>
+                            <li><span>Grado 8:</span> <strong>150,000 PSI (6 Rayas)</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Tornillería Hexagonal SAE Grado 5 / Grado 8')">Añadir a Cotización</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 55px; font-size: 22px;">Tabla de Especificaciones Mecánicas</h3>
+            <div class="table-responsive hidden-up">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Norma Técnica</th>
+                            <th>Grado / Clase</th>
+                            <th>Resistencia a la Tracción</th>
+                            <th>Límite de Fluencia</th>
+                            <th>Rango de Diámetros</th>
+                            <th>Disponibilidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ASTM A325</strong></td>
+                            <td>Tipo 1 (Carbono Medio)</td>
+                            <td>120,000 PSI</td>
+                            <td>92,000 PSI</td>
+                            <td>1/2" a 1-1/2"</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ASTM A490</strong></td>
+                            <td>Acero Aleado</td>
+                            <td>150,000 - 173,000 PSI</td>
+                            <td>130,000 PSI</td>
+                            <td>1/2" a 1-1/2"</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>SAE J429</strong></td>
+                            <td>Grado 8 (6 Líneas Radiales)</td>
+                            <td>150,000 PSI</td>
+                            <td>130,000 PSI</td>
+                            <td>1/4" a 2"</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>ISO 898-1 (Métrico)</strong></td>
+                            <td>Clase 8.8 y 10.9</td>
+                            <td>800 - 1040 MPa</td>
+                            <td>640 - 940 MPa</td>
+                            <td>M6 a M36</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - División Estructural. | <a href="../catalogo/index.html" style="color:#fff; text-decoration:underline;">Volver al Catálogo</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

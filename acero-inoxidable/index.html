@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea Acero Inoxidable | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html" class="active">Catálogo</a></li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <a href="../catalogo/index.html">Catálogo</a> / <span>Acero Inoxidable</span></div>
+            <h1>Tornillería en Acero Inoxidable AISI 304 y 316</h1>
+            <p>Protección anticorrosiva superior para proyectos navales en el Lago de Maracaibo, granjas camaroneras, plantas petroquímicas y procesamiento de alimentos.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="product-grid">
+                <div class="product-card hidden-up">
+                    <div>
+                        <span class="badge-tag">Grado Marino AISI 316</span>
+                        <h3>Línea Inoxidable 316 (A4)</h3>
+                        <p>Aleación con adición de molibdeno (2-3%) diseñada para resistir ambientes salinos severos, cloruros y ácidos industriales.</p>
+                        <ul class="specs-list">
+                            <li><span>Aplicaciones:</span> <strong>Costero, Acuícola, Químico</strong></li>
+                            <li><span>Norma:</span> <strong>ASTM F593 Grupo 2</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Tornillería Acero Inoxidable AISI 316 Grado Marino')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-1">
+                    <div>
+                        <span class="badge-tag">Grado Industrial AISI 304</span>
+                        <h3>Línea Inoxidable 304 (A2)</h3>
+                        <p>Aleación austenítica 18-8 ideal para la industria láctea, alimentaria, cervecera y equipos expuestos a humedad constante.</p>
+                        <ul class="specs-list">
+                            <li><span>Aplicaciones:</span> <strong>Alimentos, Farmacéutica</strong></li>
+                            <li><span>Norma:</span> <strong>ASTM F593 Grupo 1</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Tornillería Acero Inoxidable AISI 304 (18-8)')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-2">
+                    <div>
+                        <span class="badge-tag">Fijación Completa</span>
+                        <h3>Tuercas, Arandelas y Espárragos Inox</h3>
+                        <p>Tuercas de seguridad Nyloc, arandelas planas, de presión (Grower) y barras roscadas de 1 metro y 3 pies.</p>
+                        <ul class="specs-list">
+                            <li><span>Roscas:</span> <strong>UNC, UNF y Métrica</strong></li>
+                            <li><span>Diámetros:</span> <strong>1/8" hasta 1-1/4"</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Tuercas, Arandelas y Barras Roscadas Inoxidables')">Añadir a Cotización</button>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 55px; font-size: 22px;">Comparativa Técnica de Aleaciones</h3>
+            <div class="table-responsive hidden-up">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Aleación</th>
+                            <th>Composición Principal</th>
+                            <th>Resistencia a Salinidad / Cloruros</th>
+                            <th>Sector Recomendado</th>
+                            <th>Disponibilidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AISI 304 (A2-70)</strong></td>
+                            <td>18% Cromo / 8% Níquel</td>
+                            <td>Moderada (Ambientes dulces y húmedos)</td>
+                            <td>Alimentos, Bebidas, Frigoríficos</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>AISI 316 (A4-80)</strong></td>
+                            <td>16% Cr / 10% Ni / 2% Molibdeno</td>
+                            <td>Muy Alta (Sumergido, Salobre y Químico)</td>
+                            <td>Camaroneras, Naval, Petroquímica</td>
+                            <td><span class="status-stock">En Stock</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - División Acero Inoxidable. | <a href="../catalogo/index.html" style="color:#fff; text-decoration:underline;">Volver al Catálogo</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

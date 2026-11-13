@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html">Catálogo</a></li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="index.html" class="active">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <span>Nosotros</span></div>
+            <h1>Tornillería y Suministros Industriales C.A.</h1>
+            <p>Comprometidos con la continuidad operativa y la seguridad estructural de las empresas venezolanas desde nuestra sede en Maracaibo.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="hero" style="padding: 0;">
+                <div class="hero-content hidden-left">
+                    <h2>Nuestra Trayectoria y Compromiso</h2>
+                    <p style="margin-top:15px;">En <strong>TORSUINCA</strong> nos especializamos en la importación, comercialización y distribución de sistemas de fijación y suministros técnicos de alto desempeño. Entendemos que en la industria pesada cada perno cumple una función crítica para la seguridad de los equipos y del personal.</p>
+                    <p>Desde nuestro almacén ubicado en el Sector El Perú en Maracaibo, atendemos requerimientos urgentes de parada de planta, proyectos de ingeniería civil y mantenimiento preventivo con asesoría técnica personalizada.</p>
+                </div>
+                <div class="hero-image hidden-right">
+                    <img src="../tornilleria.jpeg" alt="Instalaciones Torsuinca">
+                </div>
+            </div>
+
+            <div class="feature-grid" style="margin-top: 60px;">
+                <div class="feature-item hidden-up">
+                    <h4>Misión</h4>
+                    <p>Proveer soluciones de fijación industrial certificadas con tiempos de respuesta inmediatos, impulsando la productividad de nuestros clientes comerciales e industriales.</p>
+                </div>
+                <div class="feature-item hidden-up cascade-1">
+                    <h4>Visión</h4>
+                    <p>Consolidarnos como el distribuidor líder de tornillería especializada en el occidente de Venezuela, destacando por nuestra precisión técnica y solidez de inventario.</p>
+                </div>
+                <div class="feature-item hidden-up cascade-2">
+                    <h4>Política de Calidad</h4>
+                    <p>Trabajamos exclusivamente con lotes que cumplen rigurosamente las normativas internacionales ASTM, SAE, DIN e ISO.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - Maracaibo, Estado Zulia. | <a href="../index.html" style="color:#fff; text-decoration:underline;">Volver al Inicio</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

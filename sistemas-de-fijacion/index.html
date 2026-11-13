@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Fijación y Espárragos | Torsuinca</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <a href="../index.html" class="logo-zone">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <span class="logo-text">TORSUINCA</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../catalogo/index.html" class="active">Catálogo</a></li>
+                <li><a href="../industrias/index.html">Industrias</a></li>
+                <li><a href="../nosotros/index.html">Nosotros</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <div class="breadcrumb"><a href="../index.html">Inicio</a> / <a href="../catalogo/index.html">Catálogo</a> / <span>Sistemas de Fijación</span></div>
+            <h1>Sistemas de Fijación Pesada y Petrolera</h1>
+            <p>Soluciones de anclaje estructural a concreto, espárragos para bridas de alta presión y sujeción de tuberías industriales.</p>
+        </section>
+
+        <section class="section-container">
+            <div class="product-grid">
+                <div class="product-card hidden-up">
+                    <div>
+                        <span class="badge-tag">ASTM A193 / A194</span>
+                        <h3>Espárragos B7 con Tuercas 2H</h3>
+                        <p>Estándar en la industria petrolera y gasífera para bridas, válvulas y líneas de alta temperatura y presión.</p>
+                        <ul class="specs-list">
+                            <li><span>Cortes:</span> <strong>A medida y Barras de 12 pies</strong></li>
+                            <li><span>Opciones:</span> <strong>Pavonado, Cadmiado, Xylan</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Espárragos Petroleros ASTM A193 B7 con Tuercas 2H')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-1">
+                    <div>
+                        <span class="badge-tag">Concreto y Roca</span>
+                        <h3>Anclajes Mecánicos y Químicos</h3>
+                        <p>Pernos expansivos tipo cuña (Wedge Anchor), camisas de fuerza y resinas epóxicas bicomponentes para cargas dinámicas.</p>
+                        <ul class="specs-list">
+                            <li><span>Diámetros:</span> <strong>3/8" hasta 1-1/4"</strong></li>
+                            <li><span>Aplicación:</span> <strong>Bases de Motores y Columnas</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Anclajes Mecánicos y Epóxicos para Concreto')">Añadir a Cotización</button>
+                </div>
+
+                <div class="product-card hidden-up cascade-2">
+                    <div>
+                        <span class="badge-tag">Sujeción de Tubería</span>
+                        <h3>Abrazaderas Tipo U (U-Bolts)</h3>
+                        <p>Pernos en U para fijación de tuberías de proceso desde 1/2" hasta 24" de diámetro nominal, incluye doble tuerca.</p>
+                        <ul class="specs-list">
+                            <li><span>Material:</span> <strong>Acero al Carbono / Inox 316</strong></li>
+                            <li><span>Acabado:</span> <strong>Galvanizado / Recubierto</strong></li>
+                        </ul>
+                    </div>
+                    <button class="btn-red" onclick="addToQuote('Abrazaderas U-Bolts para Tubería Industrial')">Añadir a Cotización</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL LATERAL -->
+    <div class="quote-modal-overlay" id="quote-modal-overlay">
+        <div class="quote-modal">
+            <div>
+                <div class="quote-modal-header">
+                    <h3>📋 Lista de Cotización</h3>
+                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                </div>
+                <div class="quote-items-list" id="quote-items-list"></div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <button class="btn-red" onclick="sendQuoteToWhatsApp()">Enviar Lista por WhatsApp</button>
+                <a href="../index.html?cotizar=true#contacto" class="btn-primary">Pasar al Formulario Web</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Torsuinca - División Sistemas de Fijación. | <a href="../catalogo/index.html" style="color:#fff; text-decoration:underline;">Volver al Catálogo</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
