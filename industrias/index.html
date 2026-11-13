@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sectores industriales atendidos por Torsuinca: petrolero, naval, camaronero, construcción, metalmecánica, agroindustria y transporte en el Estado Zulia y Venezuela.">
     <title>Industrias que Atendemos | Torsuinca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -11,10 +14,10 @@
 
     <header>
         <a href="../index.html" class="logo-zone">
-            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img" width="52" height="52">
             <span class="logo-text">TORSUINCA</span>
         </a>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../catalogo/index.html">Catálogo</a></li>
@@ -24,7 +27,7 @@
             </ul>
         </nav>
         <div class="header-action">
-            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()" aria-label="Abrir lista de cotización">📋 Mi Lista <span class="cart-badge">0</span></button>
             <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
         </div>
     </header>
@@ -39,22 +42,22 @@
         <section class="section-container">
             <div class="feature-grid">
                 <div class="feature-item hidden-up">
-                    <div class="feature-icon">🛢️</div>
+                    <div class="feature-icon" aria-hidden="true">🛢️</div>
                     <h4>Sector Petrolero y Gasífero</h4>
                     <p>Suministro de espárragos ASTM A193 B7 y B7M, tuercas 2H y fijaciones recubiertas en teflón para cabezales de pozo, múltiples de producción y refinerías.</p>
                 </div>
                 <div class="feature-item hidden-up cascade-1">
-                    <div class="feature-icon">🦐</div>
+                    <div class="feature-icon" aria-hidden="true">🦐</div>
                     <h4>Industria Camaronera y Naval</h4>
                     <p>Tornillería en Acero Inoxidable AISI 316 y bronce para estaciones de bombeo, aireadores, muelles lacustres y embarcaciones expuestas a alta salinidad.</p>
                 </div>
                 <div class="feature-item hidden-up cascade-2">
-                    <div class="feature-icon">🏗️</div>
+                    <div class="feature-icon" aria-hidden="true">🏗️</div>
                     <h4>Construcción y Metalmecánica</h4>
                     <p>Pernos estructurales A325/A490, varillas de anclaje y fijaciones para montaje de galpones, puentes, silos y estructuras metálicas pesadas.</p>
                 </div>
                 <div class="feature-item hidden-up cascade-3">
-                    <div class="feature-icon">🚜</div>
+                    <div class="feature-icon" aria-hidden="true">🚜</div>
                     <h4>Agroindustria y Transporte</h4>
                     <p>Tornillería SAE Grado 5 y Grado 8, tornillos de arado, pines de seguridad y tuercas de torque prevaleciente para maquinaria pesada y flotas de carga.</p>
                 </div>
@@ -63,12 +66,12 @@
     </main>
 
     <!-- MODAL LATERAL -->
-    <div class="quote-modal-overlay" id="quote-modal-overlay">
+    <div class="quote-modal-overlay" id="quote-modal-overlay" role="dialog" aria-label="Lista de cotización">
         <div class="quote-modal">
             <div>
                 <div class="quote-modal-header">
                     <h3>📋 Lista de Cotización</h3>
-                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                    <button class="close-modal" onclick="toggleQuoteModal()" aria-label="Cerrar lista de cotización">✕</button>
                 </div>
                 <div class="quote-items-list" id="quote-items-list"></div>
             </div>

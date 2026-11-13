@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo técnico interactivo de Torsuinca: tornillería estructural, acero inoxidable, sistemas de fijación y herramientas industriales con buscador y calculadora de torque.">
     <title>Catálogo Técnico Interactivo | Torsuinca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -11,10 +14,10 @@
 
     <header>
         <a href="../index.html" class="logo-zone">
-            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img" width="52" height="52">
             <span class="logo-text">TORSUINCA</span>
         </a>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li class="dropdown">
@@ -33,7 +36,7 @@
             </ul>
         </nav>
         <div class="header-action">
-            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()" aria-label="Abrir lista de cotización">📋 Mi Lista <span class="cart-badge">0</span></button>
             <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
         </div>
     </header>
@@ -49,9 +52,10 @@
             <!-- CONTROLES DE BÚSQUEDA Y FILTRADO -->
             <div class="catalog-controls hidden-up">
                 <div class="search-box">
+                    <label for="catalog-search" class="sr-only">Buscar productos en el catálogo</label>
                     <input type="text" id="catalog-search" placeholder="🔍 Buscar por nombre, norma (ej. A325, B7, 316, Torquímetro)...">
                 </div>
-                <div class="filter-buttons">
+                <div class="filter-buttons" role="group" aria-label="Filtros de categoría">
                     <button class="filter-btn active" data-filter="all">Todos</button>
                     <button class="filter-btn" data-filter="estructural">Estructural</button>
                     <button class="filter-btn" data-filter="inoxidable">Inoxidable</button>
@@ -66,7 +70,7 @@
                 <div class="product-card catalog-item" data-category="estructural">
                     <div>
                         <div class="product-illustration illust-estructural">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <rect x="30" y="8" width="20" height="14" rx="2" fill="#3A3A3A"/>
                                 <path d="M25 14 L40 6 L55 14 L55 22 L25 22 Z" fill="#555" stroke="#3A3A3A" stroke-width="1.5"/>
                                 <rect x="37" y="22" width="6" height="48" rx="1" fill="#707070"/>
@@ -100,7 +104,7 @@
                 <div class="product-card catalog-item" data-category="estructural">
                     <div>
                         <div class="product-illustration illust-estructural">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <rect x="28" y="10" width="24" height="13" rx="2" fill="#3A3A3A"/>
                                 <path d="M23 16 L40 8 L57 16 L57 23 L23 23 Z" fill="#555" stroke="#3A3A3A" stroke-width="1.5"/>
                                 <rect x="36" y="23" width="8" height="46" rx="1" fill="#707070"/>
@@ -133,7 +137,7 @@
                 <div class="product-card catalog-item" data-category="inoxidable">
                     <div>
                         <div class="product-illustration illust-inoxidable">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <rect x="30" y="10" width="20" height="12" rx="2" fill="#5a8dbf"/>
                                 <path d="M26 15 L40 9 L54 15 L54 22 L26 22 Z" fill="#7aaad4" stroke="#5a8dbf" stroke-width="1.5"/>
                                 <rect x="37" y="22" width="6" height="48" rx="1" fill="url(#inoxGrad1)"/>
@@ -168,7 +172,7 @@
                 <div class="product-card catalog-item" data-category="inoxidable">
                     <div>
                         <div class="product-illustration illust-inoxidable">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <!-- Tornillo Allen cabeza cilíndrica -->
                                 <rect x="28" y="12" width="24" height="10" rx="5" fill="#7aaad4" stroke="#5a8dbf" stroke-width="1"/>
                                 <rect x="35" y="14" width="10" height="6" rx="1" fill="#4a7da8"/>
@@ -205,7 +209,7 @@
                 <div class="product-card catalog-item" data-category="fijacion">
                     <div>
                         <div class="product-illustration illust-fijacion">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <!-- Espárrago B7: varilla roscada completa con 2 tuercas -->
                                 <rect x="38" y="6" width="4" height="68" rx="1" fill="#b08840"/>
                                 <line x1="38" y1="10" x2="42" y2="10" stroke="#967030" stroke-width="0.7"/>
@@ -248,7 +252,7 @@
                 <div class="product-card catalog-item" data-category="fijacion">
                     <div>
                         <div class="product-illustration illust-fijacion">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <!-- Anclaje de cuña (wedge anchor) -->
                                 <rect x="37" y="6" width="6" height="10" rx="1" fill="#c49a3c" stroke="#8a6b2e" stroke-width="1"/>
                                 <!-- Arandela -->
@@ -287,7 +291,7 @@
                 <div class="product-card catalog-item" data-category="herramientas">
                     <div>
                         <div class="product-illustration illust-herramientas">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <!-- Torquímetro -->
                                 <rect x="10" y="36" width="50" height="8" rx="3" fill="#5a9a5a" stroke="#3a7a3a" stroke-width="1.2"/>
                                 <!-- Cabeza cuadrada -->
@@ -324,7 +328,7 @@
                 <div class="product-card catalog-item" data-category="herramientas">
                     <div>
                         <div class="product-illustration illust-herramientas">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <!-- Dado de impacto: vista frontal -->
                                 <rect x="20" y="15" width="40" height="50" rx="6" fill="#5a9a5a" stroke="#3a7a3a" stroke-width="1.5"/>
                                 <!-- Cuadrante superior -->
@@ -363,7 +367,7 @@
                 
                 <div class="calc-grid">
                     <div class="calc-field">
-                        <label>Norma / Grado del Perno</label>
+                        <label for="bolt-grade">Norma / Grado del Perno</label>
                         <select id="bolt-grade">
                             <option value="A325">ASTM A325 (Estructural)</option>
                             <option value="G8">SAE Grado 8 (Alta Resistencia)</option>
@@ -372,7 +376,7 @@
                         </select>
                     </div>
                     <div class="calc-field">
-                        <label>Diámetro Nominal (Pulgadas)</label>
+                        <label for="bolt-size">Diámetro Nominal (Pulgadas)</label>
                         <select id="bolt-size">
                             <option value="1/2">1/2" - 13 UNC</option>
                             <option value="5/8">5/8" - 11 UNC</option>
@@ -382,7 +386,7 @@
                         </select>
                     </div>
                     <div class="calc-field">
-                        <label>Condición de la Rosca</label>
+                        <label for="bolt-lubrication">Condición de la Rosca</label>
                         <select id="bolt-lubrication">
                             <option value="dry">Seco / Sin Lubricar (K=0.20)</option>
                             <option value="lubricated">Lubricado / Anti-Seize (K=0.15)</option>
@@ -401,12 +405,12 @@
     </main>
 
     <!-- MODAL LATERAL -->
-    <div class="quote-modal-overlay" id="quote-modal-overlay">
+    <div class="quote-modal-overlay" id="quote-modal-overlay" role="dialog" aria-label="Lista de cotización">
         <div class="quote-modal">
             <div>
                 <div class="quote-modal-header">
                     <h3>📋 Lista de Cotización</h3>
-                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                    <button class="close-modal" onclick="toggleQuoteModal()" aria-label="Cerrar lista de cotización">✕</button>
                 </div>
                 <div class="quote-items-list" id="quote-items-list"></div>
             </div>

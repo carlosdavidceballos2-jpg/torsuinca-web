@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tornillería en acero inoxidable AISI 304 y 316 para ambientes marinos, plantas petroquímicas y procesamiento de alimentos. Distribución en Maracaibo, Venezuela.">
     <title>Línea Acero Inoxidable | Torsuinca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -11,10 +14,10 @@
 
     <header>
         <a href="../index.html" class="logo-zone">
-            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img">
+            <img src="../logo.jpeg" alt="Logo Torsuinca" class="logo-img" width="52" height="52">
             <span class="logo-text">TORSUINCA</span>
         </a>
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../catalogo/index.html" class="active">Catálogo</a></li>
@@ -24,7 +27,7 @@
             </ul>
         </nav>
         <div class="header-action">
-            <button class="quote-cart-btn" onclick="toggleQuoteModal()">📋 Mi Lista <span class="cart-badge">0</span></button>
+            <button class="quote-cart-btn" onclick="toggleQuoteModal()" aria-label="Abrir lista de cotización">📋 Mi Lista <span class="cart-badge">0</span></button>
             <a href="../index.html?cotizar=true#contacto" class="btn-primary">Solicitar Cotización</a>
         </div>
     </header>
@@ -112,12 +115,12 @@
     </main>
 
     <!-- MODAL LATERAL -->
-    <div class="quote-modal-overlay" id="quote-modal-overlay">
+    <div class="quote-modal-overlay" id="quote-modal-overlay" role="dialog" aria-label="Lista de cotización">
         <div class="quote-modal">
             <div>
                 <div class="quote-modal-header">
                     <h3>📋 Lista de Cotización</h3>
-                    <button class="close-modal" onclick="toggleQuoteModal()">✕</button>
+                    <button class="close-modal" onclick="toggleQuoteModal()" aria-label="Cerrar lista de cotización">✕</button>
                 </div>
                 <div class="quote-items-list" id="quote-items-list"></div>
             </div>
